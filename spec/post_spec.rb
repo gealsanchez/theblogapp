@@ -1,6 +1,15 @@
 require_relative 'rails_helper'
 
 RSpec.describe Post, type: :model do
+  user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer', posts_counter: 0)
+  post = Post.create(title: 'Code Review', text: 'This is my code review', comments_counter: 0, likes_counter: 0,
+                     author: user)
+  Comment.create(text: 'Great review one!', author: user, post:)
+  Comment.create(text: 'Great review two!', author: user, post:)
+  Comment.create(text: 'Great review three!', author: user, post:)
+  Comment.create(text: 'Great review four!', author: user, post:)
+  Comment.create(text: 'Great review five!', author: user, post:)
+  Comment.create(text: 'Great review six!', author: user, post:)
   subject do
     Post.new(title: 'first_post', text: 'This is my first post', comments_counter: 1, likes_counter: 1, author_id: 1)
   end
@@ -63,7 +72,11 @@ RSpec.describe Post, type: :model do
     expect(subject).to_not be_valid
   end
 
+  it 'posts counter should be 1' do
+    expect(user.posts_counter).to eq(1)
+  end
+
   it 'should return the 3 most recent comments for a given post' do
-    expect(subject.recent_comments.count).to eq(0)
+    expect(post.recent_comments.count).to eq(5)
   end
 end

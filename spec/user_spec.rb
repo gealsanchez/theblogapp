@@ -1,6 +1,17 @@
 require_relative 'rails_helper'
 
 RSpec.describe User, type: :model do
+  user = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer',
+                     posts_counter: 0)
+  Post.create(title: 'Code Review One', text: 'This is my code review one', comments_counter: 0, likes_counter: 0,
+              author: user)
+  Post.create(title: 'Code Review Two', text: 'This is my code review two', comments_counter: 0, likes_counter: 0,
+              author: user)
+  Post.create(title: 'Code Review Three', text: 'This is my code review three', comments_counter: 0, likes_counter: 0,
+              author: user)
+  Post.create(title: 'Code Review Four', text: 'This is my code review four', comments_counter: 0, likes_counter: 0,
+              author: user)
+
   subject { User.new(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer', posts_counter: 1) }
 
   before { subject.save }
@@ -42,6 +53,6 @@ RSpec.describe User, type: :model do
   end
 
   it 'should return the 3 most recent posts for a given user' do
-    expect(subject.recent_posts.count).to eq(0)
+    expect(user.recent_posts.count).to eq(3)
   end
 end
