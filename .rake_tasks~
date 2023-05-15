@@ -41,6 +41,7 @@ log:clear
 middleware
 restart
 secret
+spec
 stats
 stimulus:install
 stimulus:install:importmap
