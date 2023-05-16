@@ -41,9 +41,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[project_schema]**
-- **[migration_files]**
-- **[foreign_keys]**
+- **[Controllers Implementation]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
