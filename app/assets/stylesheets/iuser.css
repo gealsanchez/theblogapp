@@ -1,72 +1,71 @@
 .user-list-item {
-    display: flex;
-    gap: 15px;
-    border-radius: 4px;
-  }
-  
-  img {
-    width: 120px;
-    height: 120px;
-    border-radius: 4px;
-  }
-  
-  .user-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 4px;
-  }
-  
-  .user-info h2 {
-    margin-left: 50px;
-    font-size: 1.8rem;
-  }
-  
-  .user-info p {
-    text-align: end;
-    margin-right: 50px;
-    border-radius: 4px;
-  }
-  
-  .bio {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 4px;
-  }
-  
-  .posts {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 4px;
-  }
-  
-  .user-post {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 4px;
-  }
-  
-  .user-post h2 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-  }
-  
-  .like-comment {
-    text-align: end;
-  }
-  
-  .like-comment p {
-    font-size: 0.9rem;
-  }
-  
-  .bio p:first-child {
-    font-weight: 700;
-  }
-  
+  display: flex;
+  gap: 15px;
+  border-radius: 4px;
+}
+
+img {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+}
+
+.user-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.user-info h2 {
+  margin-left: 50px;
+  font-size: 1.8rem;
+}
+
+.user-info p {
+  text-align: end;
+  margin-right: 50px;
+  border-radius: 4px;
+}
+
+.bio {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.user-post {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 4px;
+}
+
+.user-post h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.like-comment {
+  text-align: end;
+}
+
+.like-comment p {
+  font-size: 0.9rem;
+}
+
+.bio p:first-child {
+  font-weight: 700;
+}
