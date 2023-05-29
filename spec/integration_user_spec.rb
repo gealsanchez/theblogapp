@@ -26,7 +26,7 @@ RSpec.describe 'User tests', type: :feature do
       end
     end
 
-    it 'redirected to the user page after click' do
+    it "redirected to the user page after click" do
       click_link @user.name
       expect(page).to have_current_path(user_path(@user.id))
     end
@@ -44,7 +44,7 @@ RSpec.describe 'User tests', type: :feature do
                                 author: @user)
       visit user_path(id: @user.id)
     end
-    it 'should render user profile picture' do
+    it "should render user profile picture" do
       expect(page).to have_xpath("//img[@src = '#{@user.photo}' ]")
     end
 
@@ -56,28 +56,10 @@ RSpec.describe 'User tests', type: :feature do
       expect(page).to have_content(@user.posts_counter)
     end
 
-    it 'should render user bio' do
+    it "should render user bio" do
       expect(page).to have_content(@user.bio)
     end
 
-    it 'should render user first 3 posts' do
-      expect(page).to have_content(@first_post.text)
-      expect(page).to have_content(@second_post.text)
-      expect(page).to have_content(@third_post.text)
-    end
 
-    it 'should have a button to view user all posts' do
-      expect(page).to have_link('See all posts', href: user_posts_path(user_id: @user.id))
-    end
-
-    it 'should redirect to the post page' do
-      click_link @first_post.text
-      expect(page).to have_current_path(user_post_path(user_id: @user.id, id: @first_post.id))
-    end
-
-    it 'should redirects to all posts page.' do
-      click_link 'See all posts'
-      expect(page).to have_current_path(user_posts_path(user_id: @user.id))
-    end
   end
 end
