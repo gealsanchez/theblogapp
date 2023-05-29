@@ -11,7 +11,7 @@ RSpec.describe 'post tests', type: :feature do
       Like.create(author: @user, post: @post)
       visit user_posts_path(user_id: @user.id)
     end
-    it "should render profile picture" do
+    it 'should render profile picture' do
       expect(page).to have_xpath("//img[@src = '#{@post.author.photo}' ]")
     end
 
@@ -47,7 +47,7 @@ RSpec.describe 'post tests', type: :feature do
       expect(page).to have_content('Pagination')
     end
 
-    it "should redirect to the post show page" do
+    it 'should redirect to the post show page' do
       click_link @post.text
       expect(page).to have_current_path(user_post_path(user_id: @user.id, id: @post.id))
     end
@@ -59,7 +59,8 @@ RSpec.describe 'post tests', type: :feature do
                            posts_counter: 1)
       @user2 = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Engineer',
                            posts_counter: 1)
-      @post = Post.create(title: 'This is a Post', text: 'This is my post', comments_counter: 2, likes_counter: 1, author: @user1)
+      @post = Post.create(title: 'This is a Post', text: 'This is my post', comments_counter: 2, likes_counter: 1,
+                          author: @user1)
       @first_comment = Comment.create(text: 'This is a comment', author: @user1, post: @post)
       @second_comment = Comment.create(text: 'This is another comment', author: @user2, post: @post)
       Like.create(author: @user1, post: @post)
@@ -77,7 +78,5 @@ RSpec.describe 'post tests', type: :feature do
     it 'should render the number of comments' do
       expect(page).to have_content(@post.comments_counter)
     end
-
-    
   end
 end
