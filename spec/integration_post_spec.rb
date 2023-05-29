@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'post tests', type: :feature do
+RSpec.describe 'Post index tests', type: :feature do
   describe 'index page' do
     before(:example) do
       @user = User.create(name: 'Edward', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer',
@@ -28,7 +28,7 @@ RSpec.describe 'post tests', type: :feature do
       expect(page).to have_content(@post.title)
     end
 
-    it 'should render post text' do
+    it 'should render post body' do
       expect(page).to have_content(@post.text)
     end
 
@@ -36,11 +36,11 @@ RSpec.describe 'post tests', type: :feature do
       expect(page).to have_content('This is a comment')
     end
 
-    it 'should render the number of comments' do
+    it 'should render how many comments' do
       expect(page).to have_content(@post.comments_counter)
     end
 
-    it 'should render the number of likes' do
+    it 'should render how many likes' do
       expect(page).to have_content(@post.likes_counter)
     end
 
@@ -48,13 +48,13 @@ RSpec.describe 'post tests', type: :feature do
       expect(page).to have_content('Pagination')
     end
 
-    it 'should redirect to the post show page' do
+    it 'When I click on a post, it redirects me to that posts show page' do
       click_link @post.text
       expect(page).to have_current_path(user_post_path(user_id: @user.id, id: @post.id))
     end
   end
 
-  describe 'show tests' do
+  describe 'Post show tests' do
     before(:example) do
       @user1 = User.create(name: 'Edward', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Developer',
                            posts_counter: 1)
@@ -76,20 +76,20 @@ RSpec.describe 'post tests', type: :feature do
       expect(page).to have_content(@post.author.name)
     end
 
-    it 'should render the number of comments' do
+    it 'should render how many comments' do
       expect(page).to have_content(@post.comments_counter)
     end
-    it 'should render the number of likes' do
+    it 'should render how many likes' do
       expect(page).to have_content(@post.likes_counter)
     end
-    it 'should render post text' do
+    it 'should render post body' do
       expect(page).to have_content(@post.text)
     end
-    it 'should render comments username' do
+    it 'should render the username of each commentor' do
       expect(page).to have_content(@user1.name)
       expect(page).to have_content(@user2.name)
     end
-    it 'should render comments text' do
+    it 'should render the comment each commentor left' do
       expect(page).to have_content(@first_comment.text)
       expect(page).to have_content(@second_comment.text)
     end
