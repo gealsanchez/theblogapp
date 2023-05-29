@@ -11,6 +11,7 @@ RSpec.describe 'post tests', type: :feature do
       Like.create(author: @user, post: @post)
       visit user_posts_path(user_id: @user.id)
     end
+
     it 'should render profile picture' do
       expect(page).to have_xpath("//img[@src = '#{@post.author.photo}' ]")
     end
@@ -59,7 +60,7 @@ RSpec.describe 'post tests', type: :feature do
                            posts_counter: 1)
       @user2 = User.create(name: 'Lilly', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Engineer',
                            posts_counter: 1)
-      @post = Post.create(title: 'This is a Post', text: 'This is my post', comments_counter: 2, likes_counter: 1,
+      @post = Post.create(title: 'title', text: 'This is my post', comments_counter: 2, likes_counter: 1,
                           author: @user1)
       @first_comment = Comment.create(text: 'This is a comment', author: @user1, post: @post)
       @second_comment = Comment.create(text: 'This is another comment', author: @user2, post: @post)
@@ -68,7 +69,7 @@ RSpec.describe 'post tests', type: :feature do
     end
 
     it 'should render post title' do
-      expect(page).to have_content('This is a Post')
+      expect(page).to have_content('title')
     end
 
     it 'should render post author' do

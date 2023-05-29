@@ -8,7 +8,7 @@ RSpec.describe 'User tests', type: :feature do
       visit users_path
     end
 
-    it 'renders the username of all users' do
+    it 'renders the username of all other users' do
       User.all.each do |user|
         expect(page).to have_content(user.name)
       end
