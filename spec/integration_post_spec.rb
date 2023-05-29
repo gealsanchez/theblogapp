@@ -78,5 +78,19 @@ RSpec.describe 'post tests', type: :feature do
     it 'should render the number of comments' do
       expect(page).to have_content(@post.comments_counter)
     end
+    it 'should render the number of likes' do
+      expect(page).to have_content(@post.likes_counter)
+    end
+    it 'should render post text' do
+      expect(page).to have_content(@post.text)
+    end
+    it 'should render comments username' do
+      expect(page).to have_content(@user1.name)
+      expect(page).to have_content(@user2.name)
+    end
+    it 'should render comments text' do
+      expect(page).to have_content(@first_comment.text)
+      expect(page).to have_content(@second_comment.text)
+    end
   end
 end
