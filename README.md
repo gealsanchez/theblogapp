@@ -41,7 +41,8 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **[Controllers Implementation]**
+- **[RSpec Integrators for Views]**
+- **[Fix n+1 problems]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,9 +96,8 @@ To run the project, execute the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Controllers_specs]**
-- [ ] **[Creating_a_data_model]**
-- [ ] **[Processing_data_in_models]**
+- [ ] **[add authorization rules]**
+- [ ] **[Add API endpoints]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -117,7 +117,7 @@ If you like this project give a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse.
+I would like to thank @JusticeMan & @JusticeMan & @Vanessa Oliveros for their contribution to his project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
