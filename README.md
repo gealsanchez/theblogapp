@@ -117,7 +117,7 @@ If you like this project give a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank @JusticeMan & @JusticeMan & @Vanessa Oliveros for their contribution to his project.
+I would like to thank @JusticeMan & @Vanessa Oliveros for their contribution to this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

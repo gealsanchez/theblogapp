@@ -47,6 +47,11 @@ section {
   gap: 20px;
 }
 
+.loginsection {
+  align-items: center;
+  gap: 2px;
+}
+
 .btn {
   width: 120px;
   padding: 8px 10px;
